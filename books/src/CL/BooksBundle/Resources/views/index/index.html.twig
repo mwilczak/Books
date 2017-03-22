@@ -1,7 +1,11 @@
 {% extends "::base.html.twig" %}
 
-{% block title %}CLBooksBundle:index:index{% endblock %}
+{% block title %}Books{% endblock %}
 
 {% block body %}
-<h1>Welcome to the index:index page</h1>
+<h1>Welcome to the Books Site</h1>
+
+    <p> <a href="/author/showAll">Pokaż autorów</a></p>
+    <p> <a href="/book/showAll">Pokaż książki</a></p>
+
 {% endblock %}
