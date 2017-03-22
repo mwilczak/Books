@@ -1,0 +1,5 @@
+cl_books:
+    resource: "@CLBooksBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

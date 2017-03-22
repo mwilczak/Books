@@ -1,0 +1,18 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}CLBooksBundle:Author:create{% endblock %}
+
+{% block body %}
+    <div class="container jumbotron">
+        <h2> Dodaj / Edytuj autora </h2>   
+      
+    {{ form_start(form, {'attr':{'class':'form-group'} } ) }}
+    {{ form_widget(form.name, {'attr':{'placeholder':'Imię i nazwisko','class':'form-control' } } ) }}<br>
+    {{ form_widget(form.save, {'attr':{'class':'btn btn-success btn-xm' } } ) }}
+    {{ form_end(form) }}
+           
+    <a href="/author/showAll" class="btn btn-warning btn-xm">Anuluj</a>
+
+    </div>
+
+{% endblock %}

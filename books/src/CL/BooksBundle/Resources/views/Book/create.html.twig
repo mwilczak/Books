@@ -1,0 +1,21 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}CLBooksBundle:Book:create{% endblock %}
+
+{% block body %}
+<div class="container jumbotron">
+        <h2> Dodaj książke </h2>   
+      
+    {{ form_start(form, {'attr':{'class':'form-group'} } ) }}
+    {{ form_widget(form.title, {'attr':{'placeholder':'Tytuł','class':'form-control' } } ) }}
+    {{ form_widget(form.description, {'attr':{'placeholder':'Opis','class':'form-control' } } ) }}
+    {{ form_widget(form.author, {'attr':{'placeholder':'Autor','class':'form-control' } } ) }}
+    {{ form_widget(form.save, {'label':'Zapisz','attr':{'class':'btn btn-success btn-xm' } } ) }}
+    {{ form_end(form) }}
+           
+    <a href="/book/showAll" class="btn btn-warning btn-xm">Anuluj</a>
+
+    </div>
+
+
+{% endblock %}

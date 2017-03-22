@@ -1,0 +1,32 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}CLBooksBundle:Book:showAll{% endblock %}
+
+{% block body %}
+    <h1> Twoje książki </h1>
+    <a href="/book/create" class="btn btn-primary">Dodaj</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                     <th>Autor</th>
+                     <th>Tytuł</th>
+                     <th>Opis</th>
+                     <th>Operacje</th>
+                </tr>
+            </thead>
+           
+            <tbody>    
+                {% for book in books %}
+                    <tr>
+                        <td>{{book.author.name}} </td>
+                        <td>{{book.title}} </td>
+                        <td>{{book.description}} </td>
+                        <td>
+                            <a href="/book/edit/{{ book.id }}" class="btn btn-primary btn-xs">Edytuj</a>
+                            <a href="/book/delete/{{ book.id}}"class="btn btn-danger btn-xs">Usuń</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}

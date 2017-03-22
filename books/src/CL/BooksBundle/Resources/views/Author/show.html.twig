@@ -1,0 +1,8 @@
+{% extends "::base.html.twig" %}
+
+
+{% block body %}
+    <h2> {{ author.name }} </h2>
+    <a href="/auhtor/edit/{{ author.id }}">Edytuj</a>
+    <a href="/auhtor/delete/{{ author.id }}">Usuń</a>
+{% endblock %}

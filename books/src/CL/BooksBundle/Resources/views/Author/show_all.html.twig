@@ -1,0 +1,27 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <a href="/author/create" class="btn btn-primary">Dodaj</a>
+        <table class="table">
+            <thead>
+                <tr>
+                     <th>Author</th>
+                     <th>Operation</th>
+                </tr>
+            </thead>
+           
+            <tbody>    
+                {% for author in authors %}
+                    <tr>
+                        <td> 
+                            {{author.name}} 
+                        </td>
+                        <td>
+                            <a href="/author/edit/{{ author.id }}" class="btn btn-primary btn-xs">Edytuj</a>
+                            <a href="/author/delete/{{ author.id}}"class="btn btn-primary btn-xs">Usuń</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}
